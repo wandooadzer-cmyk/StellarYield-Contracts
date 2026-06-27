@@ -1,14 +1,14 @@
 {
   "name": "@stellaryield/backend",
   "version": "0.1.0",
-  "description": "Backend API server for StellarYield — indexes on-chain events and exposes REST endpoints",
+  "description": "Backend API server for StellarYield \u2014 indexes on-chain events and exposes REST endpoints",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsx watch src/index.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/index.js",
+    "dev": "node init && tsx watch src/index.ts",
     "lint": "eslint src",
     "test": "vitest run",
     "db:migrate": "node dist/db/migrate.js",
